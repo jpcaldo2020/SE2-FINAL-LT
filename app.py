@@ -10,4 +10,5 @@ def hello_world():
 
 # Run the app if this script is executed
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8880))
+    app.run(host="0.0.0.0", port=port)
