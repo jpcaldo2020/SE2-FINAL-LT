@@ -27,9 +27,7 @@ jobs:
           python-version: "3.12"
 
       # Step 3: Install your packages (pip install)
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
+      
       # Step 4: Check code style
       - name: Check code style (lint)
         run: flake8 app/
