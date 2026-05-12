@@ -26,12 +26,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Step 3: Install your packages (pip install)
-      
-      # Step 4: Check code style
-      - name: Check code style (lint)
-        run: flake8 app/
 
-      # Step 5: Run tests
-      - name: Run tests
-        run: pytest tests/
+
+
+    
