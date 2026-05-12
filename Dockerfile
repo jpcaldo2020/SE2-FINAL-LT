@@ -1,18 +1,9 @@
-# 1. Base Image
-FROM node:18-alpine
+FROM python:3.9-slim
 
-# 2. Set Working Directory
-WORKDIR /app
+workdir /app
 
-# 3. Copy files
-COPY package*.json ./
-COPY . .
+COPY requirements.txt .
 
-# 4. Install Dependencies (Build Steps)
-RUN npm install
+RUN pip install -r requirements.txt
 
-# 5. Expose Port
-EXPOSE 3000
-
-# 6. Run the Application
-CMD ["npm", "start"]
+cmd ["python", "app.py"]
