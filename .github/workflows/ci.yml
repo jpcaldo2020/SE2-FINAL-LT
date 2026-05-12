@@ -23,6 +23,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+
   build-docker:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
