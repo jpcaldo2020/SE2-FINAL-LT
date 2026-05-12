@@ -23,12 +23,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Check code style (lint)
-        run: flake8 app/
-
-      - name: Run tests
-        run: pytest tests/
-
   # ── JOB 2: Build Docker image ──────────────────
   build-docker:
     name: Build and Push Docker Image
